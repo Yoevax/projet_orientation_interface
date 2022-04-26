@@ -1,0 +1,223 @@
+
+/* FONT */
+
+@font-face {
+    font-family: "Migra-Extralight";
+    src: url("../SRC/font/Migra-Extralight.woff2") format("woff2"),
+           url("../SRC/font/Migra-Extralight.woff") format("woff");
+   }
+
+@font-face {
+    font-family: "Migra-Extrabold";
+    src: url("../SRC/font/Migra-Extrabold.woff2") format("woff2"),
+           url("../SRC/font/Migra-Extrabold.woff") format("woff");
+   }
+
+body{
+    background-image: url('../SRC/ecole_athenes.jpg');
+    background-attachment: fixed;
+    background-size: 100%;
+    width:100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* BLOC NAV */
+
+#nav_header{
+    display: flex;
+    justify-content: space-between;
+    /* position: fixed; */
+    background-color: rgba(255, 218, 196, 0.137); 
+    width: 100%;
+    margin: 0px;
+    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.6);
+ } 
+ 
+ #titre_header{
+    font-size: 1.8em;
+    padding-left: 4px;
+ }
+ 
+ #titre_header a{
+    font-family: "Migra-Extrabold";
+    color:wheat;
+    text-decoration: none;
+    text-shadow: 1.5px 1.5px 1.5px rgb(22, 21, 22);
+ }
+ 
+ #titre_header a:hover{
+    color: rgb(234, 234, 86);
+    transition: 2s;
+ }
+ 
+ #nav_menu {
+     padding-top: 2vh;
+ }
+ 
+ .onglet{
+     display: inline-block;
+     padding-left: 5px;
+     padding-right: 7px;
+     font-size: 1.1em;
+ }
+ 
+ .onglet a{
+     color: wheat;
+     text-decoration: none; 
+     font-family: "Migra-Extrabold";
+ }
+ 
+ .onglet a:hover{
+     color:rgb(234, 234, 86);
+     transition: 2s;
+ }
+ 
+
+/* BLOC TIME LINE */
+
+#bloc_time_line{
+    display: flex;
+    justify-content:center;
+}
+
+.timeline{
+    margin-top: 8.3vh;
+    margin-left: 0.15vw;
+    box-sizing:border-box;
+    width: 62.5vw;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 220, 0.547);
+    color:rgb(240, 240, 240);
+    padding:2vh 2vw;
+    box-shadow:0px 0px 2px rgba(0, 0, 0, 0.6);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+.timeline:hover{
+  background-color:  rgb(229, 229, 210);
+  transition: 0.8s;
+}
+
+h2{
+    color:black;
+    text-align: center;
+    font-size: 2em;
+    font-family: "Migra-Extrabold";
+    padding: 1vh 2vw;
+}
+
+.container_content{
+    display: flex;
+    justify-content: center;
+}
+
+
+.timeline ul{
+    list-style-type:none;
+    border-left:2px solid #ffffff; /*LIGNE VERTICALE DE LA TIMELINE*/
+    padding:10px 10px;
+}
+
+.timeline ul li{
+    background-color: rgb(239, 238, 202);
+    border-radius: 10px;
+    padding:20px 20px;
+    position:relative;
+    transition:.5s;
+}
+
+.timeline ul li span{
+    display:inline-block;
+    color: black;
+    background-color:rgb(255, 255, 231);
+    border-radius:10px;
+    padding:2px 5px;
+    font-size:0.9em;
+}
+
+.timeline ul li .content h3{
+  color:#e1e177;
+  font-size:1.1em;
+  padding-top:0.83vh;
+ 
+}
+
+.timeline ul li .content p{
+  padding:5px 10px 15px 0px;
+}
+
+.description{
+    border-radius: 10px;
+    color: black;
+    font-size:0.9em;
+}
+
+.exemple{
+    font-size: 0.7em;
+    color: rgb(0, 0, 0);
+    font-style:italic;
+}
+
+/* BOUTON TIMELINE */
+.timeline ul li:before{
+  position:absolute;
+  content:'';
+  width:10px;
+  height:10px;
+  background-color:rgb(191, 191, 191);
+  border-radius:50%;
+  left:-1.25vw;
+  top: 4.65vh;
+}
+
+/* LUMIERE BOUTON JAUNE */
+.timeline ul li:hover:before{
+  background-color:#eeee58;
+  box-shadow:0px 0px 10px 2px #eeee58;
+  transition:.5s;
+}
+
+.peinture_epoque img{
+    width: 20vw;
+    height: auto;
+    border-radius: 7px;
+    box-shadow:0px 0px 7px rgba(0, 0, 0, 0.6);
+}
+
+.peinture_epoque img:hover{
+  animation: pulsate-bck 0.6s ease-in-out both;
+  transition: 0.6s;
+}
+
+@keyframes pulsate-bck {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
